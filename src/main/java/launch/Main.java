@@ -8,6 +8,8 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 
+import javax.naming.directory.DirContext;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -33,7 +35,7 @@ public class Main {
         WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
                 additionWebInfClasses.getAbsolutePath(), "/"));
-        ctx.setResources(resources);
+        ctx.setResources((DirContext) resources);
 
         tomcat.start();
         tomcat.getServer().await();
