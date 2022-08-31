@@ -1,1 +1,1 @@
-web: java -jar target/embeddedTomcatSample.jar
+web: sh build/install/deploy/bin/deploy
