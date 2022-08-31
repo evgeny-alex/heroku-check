@@ -1,9 +1,0 @@
----
-
-clean:
-  - ../Procfile
-
-remove:
-  - ../gradlew
-  - ../gradlew.bat
-  - ../gradle

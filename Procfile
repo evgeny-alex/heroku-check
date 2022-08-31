@@ -1,1 +1,1 @@
-web: sh build/install/deploy/bin/deploy
+web: java -jar build/libs/gradle-getting-started-1.0.jar
